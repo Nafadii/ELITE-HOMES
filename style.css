@@ -1,0 +1,812 @@
+/* =========================================
+   1. Typography & Base Utilities
+   ========================================= */
+* {
+  font-family: "EXO", sans-serif;
+}
+
+.transition-all {
+  transition: all 0.1s ease;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.icon-fixed-width {
+  width: 20px;
+  text-align: center;
+}
+
+.display-5 {
+  font-weight: 900;
+  line-height: 1.2;
+  font-size: calc(1.425rem + 2.1vw);
+}
+
+.max-w-4xl {
+  max-width: 896px;
+}
+
+small {
+  font-size: 14px;
+}
+
+/* =========================================
+   2. Colors, Backgrounds & Gradients
+   ========================================= */
+/* --- Text Colors --- */
+.text-muted {
+  color: oklch(0.373 0.034 259.733) !important;
+}
+.text-violet {
+  color: #7c3aed !important;
+}
+.info-violet {
+  color: #ddd6ff;
+  font-size: 20px;
+}
+.text-green {
+  color: #00a63e;
+}
+.text-purple {
+  color: #9810fa;
+}
+.text-yellow {
+  color: #d08700;
+}
+.text-amber {
+  color: #ffb900;
+}
+.text-indigo {
+  color: #4f39f6;
+}
+
+/* --- Background Colors --- */
+.bg-light-gray {
+  background-color: #f9fafb;
+}
+.bg-violet {
+  background-color: #7c3aed !important;
+}
+.bg-light-violet {
+  background-color: #ede9fe;
+}
+.bg-emerald {
+  background-color: #16a34a !important;
+}
+.bg-light-green {
+  background-color: #dcfce7;
+}
+.bg-light-purple {
+  background-color: #f3e8ff;
+}
+.bg-amber {
+  background-color: #d97706 !important;
+}
+.bg-light-yellow {
+  background-color: #fef9c2;
+}
+.bg-light-indigo {
+  background-color: #e0e7ff;
+}
+
+/* --- Buttons --- */
+.btn-violet {
+  background-color: #7c3aed;
+  border: none;
+}
+.btn-violet:hover {
+  background-color: #6d28d9;
+}
+.btn-light-violet {
+  background-color: #ede9fe;
+}
+.btn-light-violet:hover {
+  background-color: #ddd6fe;
+  color: #6d28d9 !important;
+}
+.btn-green {
+  background-color: #00a63e;
+}
+.btn-purple {
+  background-color: #9810fa;
+}
+.btn-yellow {
+  background-color: #d08700;
+}
+.btn-indigo {
+  background-color: #4f39f6;
+}
+
+.btn-gradient {
+  background: linear-gradient(to right, #7c3aed, #9333ea);
+  border: none;
+}
+.btn-gradient:hover {
+  background: linear-gradient(to right, #6d28d9, #7e22ce);
+}
+
+/* --- Gradients & Decorators --- */
+.text-gradient {
+  background: linear-gradient(to right, #7c3aed, #9333ea, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.gradient-line-right {
+  height: 2px;
+  width: 64px;
+  background: linear-gradient(to right, transparent, #8b5cf6, #7c3aed);
+}
+.gradient-line-left {
+  height: 2px;
+  width: 64px;
+  background: linear-gradient(to left, transparent, #8b5cf6, #7c3aed);
+}
+.gradient-line-right-amber {
+  height: 2px;
+  width: 64px;
+  background: linear-gradient(to right, transparent, #ffb900, #fe9a00);
+}
+.gradient-line-left-amber {
+  height: 2px;
+  width: 64px;
+  background: linear-gradient(to left, transparent, #ed6bff, #fe9a00);
+}
+
+.badge-premium {
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(to right, #f5f3ff, #faf5ff);
+  border: 2px solid #ede9fe;
+  border-radius: 50rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6d28d9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   3. Navbar & Mega Menu
+   ========================================= */
+.navbar {
+  --bs-navbar-nav-link-padding-x: 0;
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: oklch(0.372 0.044 257.287);
+  transition: color 0.3s;
+  padding-bottom: 5px;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #7c3aed !important;
+}
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  width: 100%;
+}
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+}
+.nav-link i.fa-chevron-down {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+.mega-menu {
+  width: 1200px;
+  transform: translateX(-60%) !important;
+  left: 0;
+  top: 130%;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  margin-top: 15px;
+}
+
+.mega-menu img {
+  width: 64px;
+  height: 64px;
+}
+.feature-card:hover {
+  background-color: #f9fafb;
+}
+.prop-link:hover,
+.prop-link:hover i {
+  color: #7c3aed !important;
+}
+
+.loc-card {
+  height: 80px;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.loc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(76, 29, 149, 0.6),
+    rgba(88, 28, 135, 0.6)
+  );
+  z-index: 1;
+}
+.loc-card:hover .loc-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(76, 29, 149, 0.7),
+    rgba(88, 28, 135, 0.7)
+  );
+}
+
+.ny-card {
+  background: rgba(124, 58, 237, 0.7);
+  background-image: url("pics/new-york.jpeg");
+}
+.la-card {
+  background: rgba(124, 58, 237, 0.7);
+  background-image: url("pics/los-angeles.jpeg");
+}
+.miami-card {
+  background: rgba(124, 58, 237, 0.7);
+  background-image: url("pics/miami.jpeg");
+}
+
+.res-card {
+  background-color: #ffffff;
+  border-color: transparent;
+}
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.res-card:hover .res-arrow {
+  transform: translateX(5px);
+}
+.res-bg-circle {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: 1;
+}
+.res-card:hover .res-bg-circle {
+  opacity: 0.7;
+}
+
+/* Mega Menu Sub-colors */
+.res-violet {
+  border-color: #ede9fe !important;
+}
+.res-violet:hover {
+  border-color: #ddd6fe !important;
+}
+.res-violet .icon-bg {
+  background-color: #ede9fe;
+}
+.res-violet .icon-color,
+.res-violet .res-link-color {
+  color: #7c3aed;
+}
+.res-violet:hover .res-title {
+  color: #7c3aed !important;
+}
+.res-violet .res-bg-circle {
+  background: linear-gradient(to bottom right, #ede9fe, #f5f3ff);
+}
+
+.res-green {
+  border-color: #dcfce7 !important;
+}
+.res-green:hover {
+  border-color: #bbf7d0 !important;
+}
+.res-green .icon-bg {
+  background-color: #dcfce7;
+}
+.res-green .icon-color,
+.res-green .res-link-color {
+  color: #16a34a;
+}
+.res-green:hover .res-title {
+  color: #16a34a !important;
+}
+.res-green .res-bg-circle {
+  background: linear-gradient(to bottom right, #dcfce7, #f0fdf4);
+}
+
+.res-purple {
+  border-color: #f3e8ff !important;
+}
+.res-purple:hover {
+  border-color: #e9d5ff !important;
+}
+.res-purple .icon-bg {
+  background-color: #f3e8ff;
+}
+.res-purple .icon-color,
+.res-purple .res-link-color {
+  color: #9333ea;
+}
+.res-purple:hover .res-title {
+  color: #9333ea !important;
+}
+.res-purple .res-bg-circle {
+  background: linear-gradient(to bottom right, #f3e8ff, #faf5ff);
+}
+
+/* =========================================
+   4. Hero Section & Search Form
+   ========================================= */
+.hero {
+  background-image:
+    linear-gradient(to right, #4d179acc, #59168bcc), url("pics/hero-bg-img.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  background-position: 50%;
+  background-attachment: fixed;
+  padding-top: 150px !important;
+  padding-bottom: 50px;
+}
+
+header h1 {
+  font-size: 60px;
+}
+header p {
+  font-size: 20px;
+  color: oklch(0.928 0.006 264.531);
+}
+
+.form-card {
+  width: 848px;
+  height: 311.2px;
+}
+.form-card label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.custom-input {
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid oklch(87.2% 0.01 258.338);
+  font-size: 15px;
+  box-shadow: none !important;
+}
+.custom-input:focus {
+  border: 3px solid #8b5cf6;
+}
+.form-select {
+  background-image: none;
+}
+
+.search-btn {
+  background: linear-gradient(
+    to right,
+    oklch(55.8% 0.288 302.321),
+    oklch(54.1% 0.281 293.009)
+  );
+  border: none;
+  transition: none;
+}
+.search-btn:hover {
+  background: #7331f4;
+  color: white;
+}
+
+.loc {
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+.stat-text {
+  color: #ddd6ff;
+  font-size: 16px;
+}
+
+/* =========================================
+   5. Featured Properties Section
+   ========================================= */
+.property-img-wrapper {
+  height: 256px;
+  overflow: hidden;
+}
+.property-img {
+  transition: transform 0.3s;
+}
+.property-card:hover .property-img {
+  transform: scale(1.1);
+}
+
+.heart-icon {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 2;
+}
+.heart-icon i {
+  font-size: 14px;
+}
+.heart-icon:hover i {
+  color: #ef4444 !important;
+}
+
+/* =========================================
+   6. Services Tabs Section
+   ========================================= */
+.custom-tabs {
+  border-bottom: 1px solid #e5e7eb;
+}
+.custom-tabs .nav-link {
+  color: #4b5563;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  transition: all 0.2s;
+}
+.custom-tabs .nav-link:hover {
+  color: #7c3aed;
+  border-bottom-color: #ddd6fe;
+}
+.custom-tabs .nav-link.active {
+  color: #7c3aed !important;
+  background-color: #f5f3ff !important;
+  border-bottom: 2px solid #7c3aed !important;
+}
+
+.img-column {
+  width: 550px;
+  height: 384px;
+}
+.nav-tabs {
+  --bs-nav-tabs-border-radius: none;
+}
+
+/* =========================================
+   7. Testimonials Section
+   ========================================= */
+.testimonials-bg {
+  background: linear-gradient(to right, #59168b, #4d179a);
+}
+
+.rate-card {
+  padding: 32px;
+  max-width: 900px;
+  width: 100%;
+  border: 2px solid transparent;
+  transition: all 0.1s;
+}
+
+.rate-card blockquote {
+  color: #364153;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.profile img {
+  width: 64px;
+  height: 64px;
+}
+.info h6 {
+  font-size: 18px;
+  color: #111827;
+}
+.info p {
+  font-size: 15px;
+}
+.info small {
+  font-size: 13px;
+}
+
+/* Stars Settings */
+.tight-stars i {
+  margin-right: -3px;
+}
+.tight-stars i:last-child {
+  margin-right: 0;
+}
+
+/* Indicators */
+.custom-indicators {
+  bottom: 0px;
+  margin-bottom: 0;
+}
+.custom-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  margin: 0 5px;
+  transition: all 0.1s;
+}
+.custom-indicators .active {
+  background-color: #ffffff;
+}
+
+/* Carousel Arrows */
+.custom-arrow {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+.custom-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.carousel-control-prev.custom-arrow {
+  left: -90px;
+}
+.carousel-control-next.custom-arrow {
+  right: -90px;
+}
+.custom-arrow i {
+  font-size: 14px;
+}
+/* =========================================
+   8. FAQ Section
+   ========================================= */
+.text-gradient-faq {
+  background: linear-gradient(to left, #9810fa, #7008e7, #7f22fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.custom-accordion .accordion-item {
+  border: none;
+  background-color: #fff;
+  border-radius: 12px !important;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.09);
+  overflow: hidden;
+}
+
+.custom-accordion .accordion-button {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #111827;
+  padding: 24px 32px;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: #111827;
+}
+
+.custom-accordion .accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon);
+}
+
+.custom-accordion .accordion-body {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.accordion-header:hover {
+  background-color: #fbf9fa;
+  border-top: transparent;
+}
+.accordion-button:hover {
+  background-color: #fbf9fa;
+  border-top: transparent;
+}
+/* =========================================
+   9. Contact Section
+   ========================================= */
+
+/* --- Card Backgrounds & Borders --- */
+.card-contact {
+  border: 2px solid #f6f3f4 !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card-contact:hover {
+  transform: translateY(-10px); /* الكارت هيطلع لفوق مسافة ملحوظة */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* --- Hover Border Colors (Matching the Badges) --- */
+.card-call:hover {
+  border-color: #8e51ff !important;
+}
+
+.card-email:hover {
+  border-color: #9810fa !important;
+}
+
+.card-location:hover {
+  border-color: #ff5e98 !important;
+}
+
+.card-chat:hover {
+  border-color: #4f39f6 !important;
+}
+
+/* --- Badges / Icons Gradients --- */
+.badge-call {
+  background: linear-gradient(135deg, #7f22fe, #8e51ff);
+  width: 64px;
+  height: 64px;
+}
+.badge-email {
+  background: linear-gradient(135deg, #9810fa, #ad46ff);
+  width: 64px;
+  height: 64px;
+}
+.badge-location {
+  background: linear-gradient(135deg, #e12afb, #fe9a00);
+  width: 64px;
+  height: 64px;
+}
+.badge-chat {
+  background: linear-gradient(135deg, #4f39f6, #615fff);
+  width: 64px;
+  height: 64px;
+}
+
+.text-pink {
+  color: #e60076;
+}
+
+/* --- Left Column: Info Icons --- */
+.info-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* --- Left Column: Social Media Boxes --- */
+.social-box {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-box:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* --- Right Column: Form Styling --- */
+.form-contact label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #374151;
+}
+
+.form-contact .form-control,
+.form-contact .form-select {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.form-contact .form-control:focus,
+.form-contact .form-select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 0.25rem rgba(124, 58, 237, 0.15);
+  background-color: #ffffff;
+}
+
+/* --- Decorative Background Circles --- */
+.contact-bg-circle-top {
+  position: absolute;
+  top: -9%;
+  right: -6%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 0px solid rgba(124, 58, 237, 0.1);
+  background-color: rgba(124, 58, 237, 0.03);
+  z-index: 1;
+}
+
+.contact-bg-circle-bottom {
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 0px solid rgba(124, 58, 237, 0.1);
+  background-color: rgba(124, 58, 237, 0.03);
+  z-index: 1;
+}
+
+.contact-info-card {
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.connect-card {
+  padding: 32px;
+}
+
+/* =========================================
+   10. Footer
+   ========================================= */
+.footer-bg {
+  background-color: #4c1d95; /* لون موف غامق متناسق مع الديزاين الأساسي */
+}
+
+/* تنسيق أيقونات السوشيال ميديا في الفوتر (أصغر شوية من سكشن التواصل) */
+.social-box-footer {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1); /* لون شفاف خفيف */
+  border-radius: 8px; /* حواف دائرية ناعمة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-box-footer:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  transform: translateY(-3px);
+}
+.form-check-input {
+  width: 20px;
+  height: 20px;
+}
