@@ -214,15 +214,9 @@ small {
 }
 
 .mega-menu {
-  width: 1200px;
-  transform: translateX(-60%) !important;
-  left: 0;
-  top: 130%;
   border-radius: 12px;
   border: none;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-  margin-top: 15px;
 }
 
 .mega-menu img {
@@ -385,8 +379,7 @@ header p {
 }
 
 .form-card {
-  width: 848px;
-  height: 311.2px;
+  height: auto;
 }
 .form-card label {
   font-size: 14px;
@@ -483,8 +476,8 @@ header p {
 }
 
 .img-column {
-  width: 550px;
-  height: 384px;
+  height: auto;
+  aspect-ratio: 550 / 384;
 }
 .nav-tabs {
   --bs-nav-tabs-border-radius: none;
@@ -577,6 +570,7 @@ header p {
 .custom-arrow i {
   font-size: 14px;
 }
+
 /* =========================================
    8. FAQ Section
    ========================================= */
@@ -628,11 +622,10 @@ header p {
   background-color: #fbf9fa;
   border-top: transparent;
 }
+
 /* =========================================
    9. Contact Section
    ========================================= */
-
-/* --- Card Backgrounds & Borders --- */
 .card-contact {
   border: 2px solid #f6f3f4 !important;
   transition:
@@ -642,11 +635,10 @@ header p {
 }
 
 .card-contact:hover {
-  transform: translateY(-10px); /* الكارت هيطلع لفوق مسافة ملحوظة */
+  transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
 }
 
-/* --- Hover Border Colors (Matching the Badges) --- */
 .card-call:hover {
   border-color: #8e51ff !important;
 }
@@ -663,7 +655,6 @@ header p {
   border-color: #4f39f6 !important;
 }
 
-/* --- Badges / Icons Gradients --- */
 .badge-call {
   background: linear-gradient(135deg, #7f22fe, #8e51ff);
   width: 64px;
@@ -689,7 +680,6 @@ header p {
   color: #e60076;
 }
 
-/* --- Left Column: Info Icons --- */
 .info-icon {
   width: 50px;
   height: 50px;
@@ -701,7 +691,6 @@ header p {
   font-size: 20px;
 }
 
-/* --- Left Column: Social Media Boxes --- */
 .social-box {
   width: 48px;
   height: 48px;
@@ -722,7 +711,6 @@ header p {
   transform: scale(1.1);
 }
 
-/* --- Right Column: Form Styling --- */
 .form-contact label {
   font-weight: 600;
   font-size: 0.85rem;
@@ -745,7 +733,6 @@ header p {
   background-color: #ffffff;
 }
 
-/* --- Decorative Background Circles --- */
 .contact-bg-circle-top {
   position: absolute;
   top: -9%;
@@ -783,15 +770,14 @@ header p {
    10. Footer
    ========================================= */
 .footer-bg {
-  background-color: #4c1d95; /* لون موف غامق متناسق مع الديزاين الأساسي */
+  background-color: #4c1d95;
 }
 
-/* تنسيق أيقونات السوشيال ميديا في الفوتر (أصغر شوية من سكشن التواصل) */
 .social-box-footer {
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.1); /* لون شفاف خفيف */
-  border-radius: 8px; /* حواف دائرية ناعمة */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
